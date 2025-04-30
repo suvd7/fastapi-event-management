@@ -1,0 +1,40 @@
+[
+    {
+        "id": 123,
+        "date": "string",
+        "organizer": {
+            "name": "string",
+            "email": "string"
+        },
+        "status": "string",
+        "type": "type",
+        "joiners": [
+            {
+                "name": "string",
+                "email": "string",
+                "country": "string"
+            }
+        ],
+        "location": "Budapest",
+        "max_attendees": 0
+    },
+    {
+        "id": 12367,
+        "date": "2024-08-09",
+        "organizer": {
+            "name": "ravenna",
+            "email": "ravenna@gmail.com"
+        },
+        "status": "active",
+        "type": "type",
+        "joiners": [
+            {
+                "name": "suvd",
+                "email": "suv@gmail.com",
+                "country": "Mongolia"
+            }
+        ],
+        "location": "Budapest",
+        "max_attendees": 2
+    }
+]
