@@ -1,8 +1,12 @@
+# FastAPI Event Management Project
+This is a FastAPI-based backend server for event management. The project provides endpoints to manage events, including CRUD operations (Create, Read, Update, Delete), filtering, and retrieving events. It uses a simple JSON file (events.json) as a storage mechanism instead of a database, making it easy to deploy and use for small-scale applications or prototypes.
 
-# FastAPI Project
+# Features 
+Create, Read, Update, Delete Events: Full event management functionality through API endpoints.
+Event Filtering: Filter events based on attributes such as date, organizer, status, and event type.
+Joiner Analysis: Retrieve events attended by joiners attending at least 2 meetings.
 
-## Installation
-
+# Installation
 To run this project locally, you need to have Python and pip installed on your machine.
 
 1. Clone this repository:
@@ -43,25 +47,38 @@ To run this project locally, you need to have Python and pip installed on your m
   py app/main.py
 ```  
 
-
-### Testing APIs 🚀:
-FastAPI documentation is automatically generated and interactive, meaning you can explore and test your API endpoints directly from a web browser. This documentation is generated based on the endpoint functions you define in your FastAPI application, along with their type hints, docstrings, and other metadata.
+# Testing APIs 🚀:
+FastAPI generates interactive API documentation for easy testing of endpoints. You can test and explore your API directly from a browser.
 
 Accessing interface use following link:
 ```bash
   http://127.0.0.1:8000/docs
 ```  
+# Testing the Endpoints
+Root Endpoint:
+The "Root" section provides basic information about the API.
+You can test the "GET" request to check if the server is up and running.
 
-There is 1 testing Endpoint which it is for testing.
-You can check `Root` section and test it.
+Event Endpoints:
+The "Event" section provides endpoints for:
+Get All Events: Retrieve all events stored in the events.json file.
+Filter Events: Filter events by attributes like date, organizer, status, or event type.
+Get Event by ID: Retrieve an event using its unique ID.
+Create Event: Add a new event to the system.
+Update Event: Modify an existing event by its ID.
+Delete Event: Remove an event by its ID.
 
-![image](https://github.com/frdayvz85/python/assets/55210294/825dfd00-706b-436c-b2fe-8ab2b7349eae)
-
-You can check Event APIs from ``Event`` section and test it:
-
-![image](https://github.com/frdayvz85/python/assets/55210294/7609d150-8dfc-4547-8126-184d8ea03129)
-
-
+# Project Structure
+app/
+main.py: The main entry point for running the FastAPI application.
+src/
+app.py: Contains FastAPI application setup and route definitions.
+event_analyzer.py: Contains logic for analyzing event data, e.g., finding joiners attending multiple events.
+file_storage.py: Handles reading and writing events to/from the events.json file.
+models.py: Defines the Event model used for data validation.
+routes.py: Contains route definitions for handling different API requests.
+events.json: The file where events data is stored.
+requirements.txt: The file that lists all Python dependencies.
 
 
 
